@@ -1,0 +1,110 @@
+/**
+ * Apply a natural box layout model to all elements
+ * while allowing components to change.
+ **/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/**
+ * Flexbox settings to keep all flexbox content
+ * clumped in the middle of the display area.
+ **/
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container * {
+    -webkit-flex: initial;
+    flex: initial;
+}
+
+*:before,
+*:after {
+    display: inherit;
+    -webkit-flex-flow: inherit;
+    flex-flow: inherit;
+    -webkit-justify-content: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    -webkit-flex: initial;
+    flex: initial;
+}
+
+
+/***************************************************/
+
+div {
+    border: solid black 1px;
+}
+
+*:nth-child(4n) {
+    background-color: violet;
+}
+
+*:nth-child(4n+1) {
+    background-color: dodgerblue;
+}
+
+*:nth-child(4n+2) {
+    background-color: yellow;
+}
+
+*:nth-child(4n+3) {
+    background-color: red;
+}
+
+
+/***************************************************/
+
+div.col-md-4 {
+    text-align: center;
+}
+
+div.test-section {
+    border: solid black 1px;
+}
+
+div.user-section {
+    border: solid black 1px;
+}
+
+div.quiz-section {
+    border: solid black 1px;
+}
+
+.selection-container {
+    border: solid green 1px;
+}
+
+.selection-container {
+    width: 100%;
+}
+
+div.parent-inputs {
+    width: 100%;
+}
+
+div.child-inputs {
+    width: 100%;
+}
+
+h4.selection-label {
+    display: block;
+    width: 100%;
+}
